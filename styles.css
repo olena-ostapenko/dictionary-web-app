@@ -1,0 +1,574 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.main-conteiner {
+    max-width: 737px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 58px;
+
+}
+
+/* ======================================================FONTS======================================================== */
+body {
+    font-family: 'Inter';
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inter {
+    font-family: 'Inter';
+
+}
+
+.lora {
+    font-family: 'Lora';
+}
+
+.inconsolata {
+    font-family: 'Inconsolata'
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: rgba(45, 45, 45, 1);
+
+    font-size: 64px;
+    font-weight: 700;
+
+}
+
+h2 {
+    color: rgba(164, 69, 237, 1);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h3 {
+    color: rgba(45, 45, 45, 1);
+    font-size: 24px;
+    font-weight: 700;
+    padding-right: 23px;
+    font-style: italic;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    color: rgba(45, 45, 45, 1);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 13px;
+    list-style-type: none;
+
+}
+
+h4 {
+    padding: 0;
+    color: rgba(117, 117, 117, 1);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.synonyms-text {
+    color: rgba(164, 69, 237, 1);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+
+}
+
+.phras {
+    color: rgba(117, 117, 117, 1);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 47px;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+.sourse {
+    color: rgba(117, 117, 117, 1);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration-line: underline;
+    margin-right: 21px;
+
+}
+
+.http {
+    color: rgba(45, 45, 45, 1);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration-line: underline;
+    margin-right: 15px;
+}
+
+p {
+    color: rgba(45, 45, 45, 1);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+
+}
+
+.not-found_text {
+    color: rgba(117, 117, 117, 1);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* ======================================================HEADER======================================================== */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 32px;
+    margin-bottom: 45px;
+
+}
+
+.settings {
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~header-logo~~~~~~~~~~~~~~~~~~~~~~~~ */
+.book-logo_day {
+    width: 32px;
+    height: 35.5px;
+    background-image: url(./assets/images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~header-fonts-menu~~~~~~~~~~~~~~~~~~~~~~~~ */
+.fonts-menu {
+    width: 183px;
+    height: 152px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 16px;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.10);
+
+}
+
+.font-a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+
+    color: rgba(45, 45, 45, 1);
+}
+
+.font-a:active {
+    color: rgba(45, 45, 45, 1);
+}
+
+.fonts-list .font-a:hover {
+    color: rgba(164, 69, 237, 1);
+}
+
+/* .fonts-list .serif {
+    font-family: 'Lora', serif;
+}
+
+.fonts-list .mono {
+    font-family: 'Inconsolata', monospace;
+} */
+
+.fonts-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+
+}
+
+.fonts-menu {
+    position: absolute;
+    right: 0;
+    top: 42px;
+
+}
+
+.fonts-list {
+    padding: 24px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+}
+
+.btn-v {
+    width: 14px;
+    height: 8px;
+    background-image: url(./assets/images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~v~~~~~~~~~~~~~~~~~~~~~~~~ */
+.decor-line {
+    height: 32px;
+    width: 1px;
+    background-color: rgba(233, 233, 233, 1);
+    margin: 0 26px 0 26px;
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~checbox~~~~~~~~~~~~~~~~~~~~~~~~ */
+input[type=checkbox] {
+    margin: 0;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 20px;
+    background: rgba(164, 69, 237, 1);
+    display: block;
+    border-radius: 10px;
+    position: relative;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+label:after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 14px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~checbox~~~~~~~~~~~~~~~~~~~~~~~~ */
+.moon-logo_day {
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/images/icon-moon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 20px;
+
+}
+
+/* ======================================================MAIN======================================================== */
+
+main {
+    width: 100%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~form~~~~~~~~~~~~~~~~~~~~~~~~ */
+input[type="text"] {
+    width: 100%;
+    height: 64px;
+    border-color: rgba(205, 205, 205, 1);
+    border-radius: 16px;
+    border: 1px solid var(--F4F4F4, #F4F4F4);
+    background: var(--F4F4F4, #F4F4F4);
+    padding: 20px 24px;
+    color: rgba(45, 45, 45, 1);
+    /* font-family: 'Inter'; */
+    font-size: 20px;
+    font-weight: 700;
+    caret-color: #A445ED;
+
+}
+
+input[type="text"]:focus {
+    margin-right: 10px;
+    border: 1px solid var(--A445ED, #A445ED);
+}
+
+input,
+textarea {
+    outline: none;
+
+}
+
+input[type="text"].search {
+    background-image: url(./assets/images/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 24.45px) center;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.error {
+    border-color: rgba(255, 82, 82, 1) !important;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(45, 45, 45, 1);
+    /* font-family: 'Inter'; */
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.25;
+}
+
+.error-text {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 82, 82, 1);
+    margin-top: 8px;
+}
+
+/* ======================================================INFO======================================================== */
+
+.info {
+    margin-top: 45px;
+    width: 100%;
+
+}
+
+.word {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.word-sound_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 39px;
+
+}
+
+.btn-sound {
+    width: 75px;
+    height: 76px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.part-tongue {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 35px;
+
+}
+
+.meaning {
+    margin-bottom: 66px;
+}
+
+.decor-line_main {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(233, 233, 233, 1);
+}
+
+.meaning-li {
+    margin-top: 24px;
+    padding-left: 22px;
+    margin-bottom: 13px;
+}
+
+.meaning-li::before {
+    color: #A445ED;
+    content: "•";
+    padding-right: 20px;
+}
+
+.synonyms {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 38px;
+}
+
+.li-last {
+    margin-bottom: 13px;
+}
+
+.sourse-div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img {
+    background-image: url(./assets/images/icon-new-window.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+}
+
+/* ======================================================FOUND======================================================== */
+.found{
+    margin-top: 132px;
+width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.smile {
+    font-size: 64px;
+    background-image: url(./assets/images/😕.png);
+    width: 64px;
+    height: 64px;
+    margin-bottom: 44px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden {
+    display: none;
+}
