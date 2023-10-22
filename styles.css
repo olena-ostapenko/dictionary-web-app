@@ -23,28 +23,32 @@ p {
     flex-direction: column;
     align-items: center;
     padding-top: 58px;
+    padding-bottom: ;
 
 }
 
 /* ======================================================FONTS======================================================== */
 body {
-    font-family: 'Inter';
+    width: 100vw;
+    height: 100vh;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s;
 }
 
-.inter {
+
+.sans-serif{
     font-family: 'Inter';
-
+   
 }
 
-.lora {
+.serif{
     font-family: 'Lora';
 }
 
-.inconsolata {
+.mono {
     font-family: 'Inconsolata'
 }
 
@@ -54,7 +58,6 @@ a {
 
 h1 {
     color: rgba(45, 45, 45, 1);
-
     font-size: 64px;
     font-weight: 700;
 
@@ -73,6 +76,14 @@ h3 {
     padding-right: 23px;
     font-style: italic;
 }
+
+.mono h3 {
+    font-style: normal;
+}
+.serif h3 {
+    font-style: normal;
+}
+
 
 ul {
     padding: 0;
@@ -102,6 +113,11 @@ h4 {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 0;
+    cursor: pointer;
+
+}
+.synonyms-text:hover {
+   text-decoration: underline solid 2px;
 
 }
 
@@ -113,6 +129,7 @@ h4 {
     padding-left: 47px;
     margin-bottom: 40px;
     display: inline-block;
+    
 }
 
 .sourse {
@@ -190,13 +207,16 @@ header {
     box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.10);
 
 }
-
+.fonts-list li{
+    margin-bottom: 0;
+}
 .font-a {
+    font-family: 'Inter';
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 18px;
-
+    font-weight: 700;
     color: rgba(45, 45, 45, 1);
 }
 
@@ -208,13 +228,13 @@ header {
     color: rgba(164, 69, 237, 1);
 }
 
-/* .fonts-list .serif {
+.fonts-list .serif {
     font-family: 'Lora', serif;
 }
 
 .fonts-list .mono {
     font-family: 'Inconsolata', monospace;
-} */
+}
 
 .fonts-name {
     font-weight: 700;
@@ -299,7 +319,7 @@ label:active:after {
     width: 14px;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~checbox~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .moon-logo_day {
     width: 20px;
     height: 20px;
@@ -335,7 +355,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
     margin-right: 10px;
-    border: 1px solid var(--A445ED, #A445ED);
+    border: 1px solid rgba(164, 69, 237, 1);
 }
 
 input,
@@ -400,10 +420,11 @@ input[type="text"]::placeholder {
 }
 
 .btn-sound {
-    width: 75px;
+    width: 76px;
     height: 76px;
     cursor: pointer;
     background-size: cover;
+    background-image: url(./assets/images/icon-play.svg);
 }
 
 .part-tongue {
@@ -424,18 +445,27 @@ input[type="text"]::placeholder {
     width: 100%;
     background-color: rgba(233, 233, 233, 1);
 }
+.parent-li{
+    margin-top: 25px;
+    margin-bottom: 40px;
+
+}
 
 .meaning-li {
-    margin-top: 24px;
     padding-left: 22px;
     margin-bottom: 13px;
 }
-
-.meaning-li::before {
+::marker{
     color: #A445ED;
     content: "•";
     padding-right: 20px;
 }
+
+/* .meaning-li::before {
+    color: #A445ED;
+    content: "•";
+    padding-right: 20px;
+} */
 
 .synonyms {
     display: flex;
@@ -444,6 +474,7 @@ input[type="text"]::placeholder {
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 38px;
+    flex-wrap: wrap;
 }
 
 .li-last {
@@ -455,14 +486,29 @@ input[type="text"]::placeholder {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+    
+
+    
 }
 
-.img {
+.http {
+    flex-wrap: wrap;
+    background-position: right;
+   transform-origin: center right 20px;
     background-image: url(./assets/images/icon-new-window.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 12px;
-    height: 12px;
+   padding-right: 22px;
+}
+.sound-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.source-parent{
+    display: flex;
+    flex-direction: row;
+    gap:9px;
 }
 
 /* ======================================================FOUND======================================================== */
@@ -487,86 +533,42 @@ width: 100%;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ~~~~~~~~~~~~~~~~~~~~~    night~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.night{
+    background-color: rgba(5, 5, 5, 1);
+  
+}
+.night h1{
+    color: rgba(255, 255, 255, 1);
+}
+.night h3 {
+    color: rgba(255, 255, 255, 1);
+
+}
+.night li {
+    color: rgba(255, 255, 255, 1);
+
+}
+.night .http {
+    color: rgba(255, 255, 255, 1);
+}
+.night .font-a{
+    color: rgba(255, 255, 255, 1);
+}
+.night .fonts-menu {
+    background-color:rgba(31, 31, 31, 1);
+    box-shadow: 0px 5px 30px 0px rgba(164, 69, 237, 1);
+}
+.night input[type="text"] {
+    border-color: rgba(205, 205, 205, 1);
+    border: 1px solid rgba(31, 31, 31, 1);
+    background: rgba(31, 31, 31, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.night [type="text"]::placeholder {
+    color: rgba(255, 255, 255, 1);
+}
 
 
 .hidden {
